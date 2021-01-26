@@ -1,0 +1,68 @@
+.vontainer-button {
+    width: 50%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.vontainer-button a {
+    width: 151px;
+    padding: 16px 40px;
+    border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff !important;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+.container-slim {
+    position: relative;
+}
+
+.container-slim .fonts-media {
+    position: absolute; 
+    right: 0; 
+    top: 0;
+    margin-right: 50px;
+}
+
+#content > section:nth-child(2) > div > div.container-slim > div > a.ig-font,
+#content > section:nth-child(2) > div > div.container-slim > div > a.fb-font {
+    margin-right: 20px;
+}
+
+.fb-font
+.ig-font {
+    margin-right: 20px;
+}
+
+
+#content > section:nth-child(2) > div > div.container-slim > div > a.ig-font,
+#content > section:nth-child(2) > div > div.container-slim > div > a.fb-font, 
+#content > section:nth-child(2) > div > div.container-slim > div > a.web-font {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .container-slim .fonts-media {
+        position: relative;
+        margin: 11px 0;
+    }
+}

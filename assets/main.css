@@ -1,0 +1,1032 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('fonts/Graphik-Bold.woff2') format('woff2'),
+         url('fonts/Graphik-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik-Regular';
+    src: url('fonts/Graphik-Regular.woff2') format('woff2'),
+         url('fonts/Graphik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Graphik-Medium';
+    src: url('fonts/Graphik-Medium.woff2') format('woff2'),
+         url('fonts/Graphik-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+h2, h1 {
+	font-family: 'Graphik';
+}
+
+figure img {
+	width: 100%;
+	height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+	position: fixed;
+	width: 100%;
+    padding-top: 50px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+	padding: 50px 60px;
+}
+
+header div.container {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header div.container figure {
+    width: 52px;
+}
+
+header > div > a > figure > img {
+    width: 70%
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	padding-top: 110px;
+}
+
+body{
+}
+
+
+#bm {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main {
+    transition:background 500ms;
+}
+
+
+
+.flex {
+	display: flex;
+}
+
+.container {
+	max-width: 1700px;
+	margin: auto;
+}
+
+
+nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    transition: all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav.active {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+
+nav a {
+    font-family: Graphik-Regular;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 2.5rem;
+    line-height: 30px;
+    text-decoration: none;
+    transition: all 400ms ease;
+    letter-spacing: 1rem;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+
+nav a:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+nav.active span.close {
+    position: absolute;
+    right: 170px;
+    top: 80px;
+    display: block;
+    cursor: pointer;
+}
+
+body > div:nth-child(3) > div > span.close {
+    position: absolute;
+    right: 45px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.research-modal {
+    width: 55%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -7%);
+    background: #fff;
+    transition: all .3s ease;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 21px 8px rgba(0,0,0,0.39);
+    z-index: 999;
+}
+
+.research-modal span.close {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+div.research-modal > p {
+    font-size: 1.6rem;
+    font-family: Graphik-Regular;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 6vh;
+    position: absolute;
+    line-height: 6vh;
+}
+
+
+.contacto {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    transition: all .3s ease;
+    display: none;
+    z-index: 999;
+    padding-top: 100px;
+}
+
+.contacto span.close {
+    position: absolute;
+    right: 170px;
+    top: 80px;
+    display: block;
+    cursor: pointer;
+}
+
+.contacto h3 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Graphik-Medium;
+    display: block;
+    margin-bottom: 20px;
+    /*margin-top: 70px;*/
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-family: Graphik-Regular;
+}
+
+.contacto form button {
+    width: 151px;
+    padding: 16px 40px;
+    border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.contacto form div label {
+    display: block;
+}
+
+.contacto form div.container-colum div input {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.contacto form div.container-text textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.contacto form div.container-colum {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.seccion-info{
+	height: auto!important;
+}
+
+
+.burger {
+    width: 52px;
+    height: 52px;
+    background: #000;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 90%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin-bottom: 3px;
+    text-align: right;
+}
+
+.burger span:nth-child(2) {
+    width: 75%;
+}
+
+section.section-logo {
+    overflow: hidden;
+}
+
+section.section-logo h1 {
+    font-size: 7.1875rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 4vw;
+    position: absolute;
+    z-index: 9;
+}
+
+section.seccion-contacto div.container h2 {
+	font-size: 25.1875rem;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 4vw;
+}
+#main{
+	width: 100%;
+}
+
+#main.negro {
+    background: #000;
+}
+
+#main.azul_marino {
+    background: #2c2e43;
+}
+
+#main.azul {
+    background: #42bfdd;
+}
+
+#main.verde_agua {
+    background: #bbe6e4;
+}
+
+#main.verde_claro {
+    background: #f0f6f6;
+}
+
+
+section.seccion-info div.container {
+    margin-top: 70px;
+    padding: 60px;
+}
+
+section.seccion-info div.container p {
+	color: #2C2E43;
+	font-family: Graphik-Regular;
+    font-size: 45px;
+    line-height: 1.7;
+    text-align: left;
+    padding: inherit;
+    color: #fff;
+    padding: 60px;
+}
+
+section.seccion-portafolio {
+	height: auto;
+	padding-bottom: 30vh;
+	padding-top: 100px;
+	position: relative;
+}
+
+section.seccion-portafolio .container h2 {
+	width: 100%;
+	margin-bottom: 50px;
+    padding-bottom: 0px;
+    color: rgba(255,255,255,0.4);
+    font-size: 20rem;
+    line-height: 0.9;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1vw;
+	position: sticky;
+  	top: 100px;
+  	width: 100%;
+}
+
+
+section.seccion-portafolio .container .item-content {
+    width: 100%;
+    flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+    padding-left: 18vw;
+}
+
+section.seccion-portafolio .container .item-content figure {
+	width: 50%;
+}
+section.seccion-portafolio .container .item-content figure img{
+	width: 70%;
+}
+section.seccion-portafolio .container .item-content div {
+	width: 50%;
+	height: auto;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 119px;
+
+}
+
+
+section.seccion-portafolio div.container div div p {
+    color: #2C2E43;
+    font-family: Graphik-Medium;
+    font-size: 2.2vw;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+}
+
+section.seccion-portafolio div.container div div button {
+	width: 165px;
+	padding: 16px 40px;
+	border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+button, a.btn {
+	width: 151px;
+	padding: 16px 40px;
+	border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+section.seccion-research {
+    height: auto;
+    padding-top: 0;
+}
+
+#seccion_research > div > figure {
+    width: 500px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+section.seccion-research div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.seccion-research div.container h2 {
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: rgba(255,255,255,0.4);
+    font-size: 25.1875rem;
+    line-height: 0.8;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1vw;
+	position: sticky;
+  	top: 200px;
+}
+
+#seccion_research > div > button {
+    margin: 0 auto;
+    width: 165px;
+    z-index: 3;
+}
+
+
+section.seccion-research div.container p {
+    color: #2C2E43;
+    font-family: Graphik-Regular;
+    font-size: 45px;
+    line-height: 1.7;
+    text-align: center;
+    padding: 80px 147px;
+	position: relative;
+
+}
+
+
+
+
+
+section.seccion-contacto {
+	height: auto;
+	padding-bottom: 15%;
+    padding-top: 250px;
+	overflow: hidden;
+}
+
+section.seccion-contacto div.container {
+	flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+section.seccion-contacto div.container p {
+	margin-bottom: 12px;
+    font-family: Graphik-Regular;
+    color: black;
+    font-size: 2.8125rem;
+    line-height: 1.4;
+    font-weight: 400;
+    position: relative;
+    top: -2vw;
+}
+
+section.seccion-contacto div.container button {
+	width: 170px;
+	padding: 16px 40px;
+	border-radius: 110px;
+    background-color: black;
+    font-family: Graphik-Regular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 10px 20px 0px;
+    transition-property: transform, box-shadow;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+section.seccion-contacto figure {
+	width: 30vw;
+    height: auto;
+    position: absolute;
+    right: -8vw;
+    top: 0vw;
+    transform: translate(-2vw, 7vw);
+}
+
+
+div.submenu {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    z-index: 1;
+}
+
+div.submenu ul {
+    width: 10px;
+    height: auto;
+    list-style: none;
+}
+
+div.submenu ul li {
+    position: relative;
+}
+
+div.submenu ul li a {
+    width: 18px;
+    height: 18px;
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+div.submenu ul li:last-child:before {
+    display: none;
+}
+
+
+
+section.portafolio-main {
+    height: auto;
+}
+
+
+section.portafolio-main h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-family: Graphik-Medium;
+}
+
+
+
+div.portafolio-container {
+    max-width: 980px;
+    margin: auto;
+}
+
+
+div.portafolio-container div.categorias {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+
+div.portafolio-container div.categorias a {
+    text-decoration: none;
+    color: black;
+    font-family: Graphik-Regular;
+    font-size: 20px;
+}
+
+div.portafolio-container div.categorias a:hover {
+    text-decoration: underline;
+}
+
+div.galeria {
+    max-width: 980px;
+    margin: auto;
+    padding-top: 70px;
+}
+
+div.posicion_first {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+div.posicion_first .large {
+    width: 30%;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+div.posicion_first .short .filtro,
+div.posicion_first .large .filtro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+    background: #fff;
+    display: none;
+}
+
+
+div.posicion_first .large figure {
+    cursor: pointer;
+}
+
+
+div.posicion_first .short {
+    width: 30%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+div.posicion_first .short figure {
+    width: 100%;
+    max-height: 195px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+
+    section.seccion-portafolio div.container h2 {
+        font-size: 17rem;
+    }
+
+    section.seccion-contacto div.container h2, section.section-logo h1 {
+        font-size: 20rem;
+    }
+
+    section.seccion-portafolio .container h2 {
+        font-size: 20rem;
+    }
+}
+
+
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+    html {
+        font-size: 13px;
+    }
+
+    .container {
+       max-width: 1024px !important;
+    }
+
+    section.seccion-portafolio div.container h2 {
+        font-size: 17rem;
+    }
+
+    section.seccion-contacto div.container h2, section.section-logo h1 {
+        font-size: 20rem;
+    }
+
+    section.seccion-portafolio .container h2 {
+        font-size: 20rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    html {
+        font-size: 11px;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        max-width: 959px!important;
+    }
+
+    section.seccion-portafolio div.container h2 {
+        font-size: 17rem;
+    }
+
+
+    section.seccion-contacto div.container h2, section.section-logo h1 {
+        font-size: 20rem;
+    }
+
+    section.seccion-portafolio div.container div {
+        left: 10vh;
+        padding-top: 75px;
+    }
+
+    section.seccion-portafolio .container h2 {
+        font-size: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    header {
+        padding: 50px 20px;
+    }
+    
+    nav a {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    nav.active span.close {
+        right: 40px;
+    }
+
+    section.seccion-contacto figure {
+        width: 90%;
+        position: unset;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+
+    div.portafolio-container div.categorias {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.portafolio-main h2 {
+        text-align: center;
+    }
+
+    div.portafolio-container div.categorias a {
+        font-size: 25px;
+        line-height: 48px;
+    }
+
+    div.galeria {
+        padding: 20px;
+    }
+
+    div.posicion_first {
+        flex-direction: column;
+    }
+
+    div.posicion_first .large {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    div.posicion_first .large figure {
+        margin-bottom: 20px;
+    }
+
+    div.posicion_first .short {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    div.posicion_first .short figure {
+        max-height: none;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .contacto form div.container-colum {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .contacto form div.container-colum div input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contacto {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contacto span.close {
+        right: 6px;
+        top: 0px;
+    }
+
+    .contacto form div label {
+        font-size: 16px;
+    }
+
+    .contacto form button {
+        margin-top: 5px;
+    }
+
+    #main {
+        background: #fff;
+    }
+
+    section {
+        height: auto;
+    }
+
+    section.seccion-info {
+        padding-top: 50px;
+    }
+
+    section.seccion-research {
+        padding: 0 20px;
+    }
+
+    #seccion_research > div > figure {
+        width: 100%;
+        margin: 0;
+        margin-top: 45px;
+    }
+
+    section.seccion-info div.container {
+        margin-top: 0;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    section.seccion-portafolio div.container {
+        flex-direction: column;
+    }
+
+    section.seccion-portafolio .container .item-content div {
+        padding-top: 70px;
+    }
+
+    section.seccion-portafolio div.container div button {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    section.seccion-contacto div.container h2,
+    section.section-logo h1 {
+        font-size: 60px;
+        color: #000;
+    }
+
+    section.seccion-research div.container h2 {
+        font-size: 60px;
+        letter-spacing: 0;
+        position: unset;
+        color: #000;
+        opacity: 0.3;
+    }
+
+    section.seccion-research div.container p {
+        padding: 0;
+        font-size: 18px;
+        margin: 45px 0;
+    }
+
+    .research-modal {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+    }
+
+    div.research-modal > p {
+        padding: 0;
+        font-size: 16px;
+        line-height: 3;
+        margin-top: 13vh;
+    }
+
+    section.seccion-portafolio .container .item-content {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.seccion-portafolio div.container div div p {
+        font-size: 18px;
+    }
+
+    section.seccion-info div.container {
+        padding: 0;
+    }
+
+    section.seccion-info div.container p {
+        font-size: 16px;
+        text-align: justify;
+        color: #000;
+    }
+
+    section.seccion-portafolio div.container div p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    section.seccion-portafolio .container .item-content figure img {
+        width: 90%;
+    }
+
+    section.seccion-portafolio div.container h2 {
+        font-size: 60px;
+        position: unset;
+        letter-spacing: 0;
+        color: #000;
+        opacity: 0.3;
+    }
+
+    section.seccion-portafolio {
+        padding-bottom: 145px;
+    }
+
+    section.seccion-contacto {
+        padding-top: 145px;
+    }
+
+    section.seccion-contacto div.container p {
+        font-size: 18px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        padding: 0 30px;
+    }
+
+    br {
+        display: none;
+    }
+
+    .glitch {
+        top: 15%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 320px) {
+
+}
